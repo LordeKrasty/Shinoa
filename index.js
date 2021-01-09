@@ -32,7 +32,17 @@ client.on("message", async message => {
 
 
 client.on("ready", () => {
-  console.log("Estou on!")
+  let activities = [
+    `a`,
+    `b`,
+    `c`,
+    `d`    
+  ],
+  i = 0;
+  setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {
+    type: "WHATCHING"
+  }), 5000); //WATCHING, LISTENING, PLAYING, STREAMING
+  console.log("Estou Online")
 });
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
