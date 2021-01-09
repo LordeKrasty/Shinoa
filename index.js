@@ -50,8 +50,8 @@ console.log("Estou Online!")
 
 client.on("guildMemberAdd", async (member) => { 
 
-  let guild = await client.guilds.cache.get("IDdoSeuServidor");
-  let channel = await client.channels.cache.get("IDdoCanalDeBoasVindas");
+  let guild = await client.guilds.cache.get("797500441419317248");
+  let channel = await client.channels.cache.get("I797500441419317252");
   let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "nomedoemoji");
   if (guild != member.guild) {
     return console.log("Sem boas-vindas pra você! Sai daqui saco pela.");
@@ -60,10 +60,10 @@ client.on("guildMemberAdd", async (member) => {
       .setColor("#7c2ae8")
       .setAuthor(member.user.tag, member.user.displayAvatarURL())
       .setTitle(`${emoji} Boas-vindas ${emoji}`)
-      .setImage("https://imgur.com/3vYVlHb.gif")
+      .setImage("https://i.pinimg.com/originals/fd/7d/60/fd7d602ea39ef26b9649d7010d1de054.gif")
       .setDescription(`**${member.user}**, bem-vindo(a) ao servidor **${guild.name}**! Atualmente estamos com **${member.guild.memberCount} membros**, divirta-se conosco! :heart:`)
       .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
-      .setFooter("Código de Hyouka Discord")
+      .setFooter("Código do Shinoa Discord")
       .setTimestamp();
 
     channel.send(embed);
