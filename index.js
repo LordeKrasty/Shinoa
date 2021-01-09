@@ -30,4 +30,9 @@ client.on("message", async message => {
   }
  );
 
+
+client.on("ready", () => {
+  console.log("Estou on!")
+});
+
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
